@@ -1,7 +1,7 @@
 SVG Gauge
 ==================
 
-![license][license-img] ![github][github-img]]
+![license][license-img] ![github][github-img]
 
 Simple gauges using SVG
 
