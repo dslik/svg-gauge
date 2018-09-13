@@ -9,19 +9,19 @@
 		<script src="gauge.js"></script>
 		<svg id="gauge" width="1px" height="1px"></svg>
 		<script>
-			var svg = getNode("svg", { width:306, height:204, id:"gauge" });
+			var svg = svgen("svg", { width:306, height:204, id:"gauge" });
 			var element = document.getElementById('gauge');
 
 			// Example gauge
 			drawGauge(svg, 220, 260, 233.2, "V", "Feeder Voltage", 225, 255)
 
 			// Translated gauge
-			group = getNode('g', {transform:"translate(0 102)" });
+			group = svgen('g', {transform:"translate(0 102)" });
 			drawGauge(group, 0, 100, 50.3, "kW", "Feeder Current", null, null, null, 80)
 			svg.appendChild(group)
 
 			// Translated and scaled gauge
-			group = getNode('g', {transform:"translate(102 -0.5) scale(2.01)" });
+			group = svgen('g', {transform:"translate(102 -0.5) scale(2.01)" });
 			drawGauge(group, 0, 100, 60, "% SoC", "State of Charge", 60, null, 50)
 			
 			svg.appendChild(group)
